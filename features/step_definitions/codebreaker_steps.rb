@@ -23,7 +23,7 @@ When /^I start a new game$/ do
 end
 
 Then /^I should see "([^"]*)"$/ do |message|
-  output.messages.should include(message)
+  expect(output.messages).to include(message)
 end
 
 # submits
@@ -38,5 +38,5 @@ Given /^I guess "([^"]*)"$/ do |guess|
 end
 
 Then /^the mark should be "([^"]*)"$/ do |mark|
-  output.messages.should include(mark)
+  expect(output.messages).to include(mark)
 end
